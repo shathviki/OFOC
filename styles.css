@@ -1,0 +1,677 @@
+/* Reset styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Basics */
+body {
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+/* Header */
+header {
+    background-color: #84aedb;
+    color: #fff;
+    padding: 15px 0;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+    position: relative; /* Set the container as a positioning context */
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    max-height: 50px;
+    margin-right: 10px;
+}
+
+.logo-container h2 {
+    font-size: 24px;
+    color: #fff;
+    font-weight: 500;
+    margin: 0;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px;
+    transition: color 0.3s ease-in-out;
+}
+
+.nav-links a:hover {
+    color: #443f83;
+}
+
+/* Hero section */
+.hero {
+    background-color: white;
+    padding: 50px 0; /* Adjust the top and bottom padding */
+    text-align: center;
+}
+
+.hero img.logo {
+    max-width: 100%;
+    margin-bottom: 30px;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+/* Image and text positioning */
+.container img {
+    max-width: 100%; /* Ensure the image doesn't exceed its container width */
+    display: block;
+}
+
+.container h1 {
+    position: absolute; /* Position the text absolutely within the container */
+    top: 20%; /* Position the text 50% from the top */
+    left: 50%; /* Position the text 50% from the left */
+    transform: translate(-50%, -50%); /* Center the text within the container */
+    color: #443f83; 
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 48px;
+}
+
+.container p {
+    position: absolute; /* Position the text absolutely within the container */
+    top: 50%; /* Position the text 50% from the top */
+    left: 50%; /* Position the text 50% from the left */
+    transform: translate(-50%, -50%); /* Center the text within the container */
+    background-color: white; /* Add a semi-transparent background for better readability */
+    color: #7287c3;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 20px;
+}
+
+.button {
+    position: absolute; /* Position the text absolutely within the container */
+    top: 75%; /* Position the text 50% from the top */
+    left: 45%; /* Position the text 50% from the left */
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #84aedb;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out;
+    font-size: 15px;
+}
+
+.button:hover {
+    background-color: #5b8cc6;
+}
+
+/* ABOUT PAGE */
+.about {
+    background-color: #c2ebff;
+    padding: 20px; /* Padding around the content */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.about-description {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.about h1 {
+    font-size: 36px;
+    margin: 20px 0;
+    color: #443f83;
+}
+
+.about p {
+    font-size: 18px;
+    color: #7287c3; /* Slightly darker text color for descriptions */
+    margin: 0 40px;
+}
+
+.image-and-text-container {
+    display: flex; /* Use flexbox to align items horizontally */
+    align-items: center; /* Vertically center align items */
+}
+
+.image-and-text-container img {
+    margin-left: 30px;
+    width: 20%;
+}
+
+.text-container {
+    flex: 1; /* Allow the text container to expand and take remaining space */
+    padding-left: 20px; /* Add some spacing between the image and text */
+}
+
+.impact-metrics {
+    margin-top: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+  
+.impact-button {
+    width: 190px;
+    height: 190px;
+    text-align: center;
+    border-radius: 50%; /* Make the shape circular */
+    font-size: 17px;
+    background-color: #84aedb;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: 'EB Garamond', serif;
+    align-items: center;
+}
+  
+.impact-button + .impact-button {
+    margin-left: 20px; /* Adjust the margin as needed */
+}
+
+.impact-button:hover {
+    background-color: #CCCCFF;
+}
+
+/* Adjustments for small screens */
+@media screen and (max-width: 700px) {
+    .bio {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 20px; /* Add space between bios on smaller screens */
+    }
+}
+
+/* Ensure bios are displayed side by side */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.bio {
+    width: calc(25% - 20px); /* Adjust the width of each bio card */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 3px;
+    background-color: #f9f9f9;
+    margin-bottom: 10px; /* Add space between bios */
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    border-radius: 8px; /* Rounded corners */
+    transition: transform 0.3s, box-shadow 0.3s; /* Smooth scaling and shadow on hover */
+}
+
+.bio-img {
+    width: 100%; /* Adjust image width */
+    border-radius: 5px 5px 0 0; /* Rounded corners for the top */
+    object-fit: cover; /* Maintain aspect ratio */
+}
+
+.about-container {
+    padding: 10px;
+}
+
+.bio:hover {
+    transform: scale(1.05); /* Enlarge on hover */
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
+}
+
+.about-container p {
+    margin: 3px 5px; /* Adjust margins for the text elements */
+}
+
+.club-buttons {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px;
+    text-decoration: none;
+    border-radius: 20px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    font-size: 25px;
+    color: #CCCCFF;
+}
+
+.club-button {
+    padding: 10px 20px;
+    margin-left: -400px;
+    margin: 10px;
+    background-color: #443f83;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+.club-button:hover {
+    background-color: #CCCCFF;
+}
+
+/* NEWS PAGE */
+.news {
+    background-color: #c2ebff;
+    padding: 20px; /* Padding around the content */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.news-title {
+    font-size: 36px;
+    margin: 20px 0;
+    color: #443f83;
+}
+
+.news-articles {
+    display: flex; /* Use flexbox to create a row layout */
+    flex-wrap: wrap; /* Enable wrapping of flex items */
+    gap: 10px; /* Define space between images */
+    justify-content: center; /* Center items horizontally */}
+
+.news-articles img {
+    margin-top: 5px;
+    margin-right: 10px; /* Add margin to the right of each image for space */
+}
+
+.news-title p {
+   font-size: 24px;
+}
+
+/* To prevent margin being applied to the last image */
+.news-articles img:last-child {
+    margin-right: 0;
+}
+
+.news-articles a {
+    flex: 1 0 calc(30% - 10px); /* Adjust the width of each image container */
+    /* The above calculation ensures 3 images per row with space between them */
+    margin-bottom: 10px; /* Optional margin between rows of images */
+}
+
+/* EVENTS PAGE */
+.events {
+    background-color: #c2ebff;
+    padding: 20px; /* Padding around the content */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.events h1 {
+    font-size: 36px;
+    margin: 20px 0;
+    color: #443f83;
+}
+
+.event-title {
+    font-size: 25px;
+    margin: 20px 0;
+    color: black; 
+}
+
+.event-description {
+    font-size: 20px;
+    margin: 20px 0;
+    color: #5b8cc6; 
+    line-height: 1.5;
+}
+
+.events-images {
+    /* Flexbox styles for the image row */
+    display: flex;
+    justify-content: center; /* Center the images horizontally */
+    gap: 10px; /* Adjust space between images */
+    margin-top: 10px; /* Add margin as needed */
+}
+
+.dare-videos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px; /* Adjust the gap between video items */
+    justify-content: center;
+}
+
+.video-item {
+    width: calc(20.33% - 15px); /* Adjust the width of each video container */
+    max-width: 300px; /* Adjust maximum width */
+    text-align: center;
+}
+
+.video-item p {
+    margin-top: 5px;
+    text-align: center; /* Align the description text */
+}
+
+.dashed-line {
+    border-top: 1px dashed #000; /* Adjust thickness and color as needed */
+    width: 100%; /* Set the width as needed */
+    margin: 20px 0; /* Adjust margin as needed */
+}
+
+/* GET INVOLVED PAGE */
+.get-involved {
+    background-color: #c2ebff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.get-involved h1 {
+    font-size: 40px;
+    margin: 30px 0 5px 0;
+    color: #443f83;
+}
+
+.gi-one,
+.gi-two,
+.gi-three {
+    display: flex;
+    background-color: #F0FFFF;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px;
+    text-align: center;
+    flex: 1;
+    max-width: calc(90% - 100px); /* Adjust the max-width here to make boxes wider */
+}
+.gi-text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.gi-image {
+    width: auto;
+    min-width: 250px;
+    max-width: 100%;
+    border-radius: 30%;
+    margin-bottom: 10px;
+}
+
+.gi-title {
+    font-size: 20px;
+    color: #443f83;
+    margin-left: -150px;
+    margin-bottom: 10px;
+}
+
+.gi-description {
+    font-size: 18px;
+    margin: 14px;
+    text-align:left;
+}
+
+.gi-button {
+    padding: 10px 10px;
+    margin: 10px;
+    background-color: #443f83;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+    margin-left: -170px; /* Adjust this value to move the button to the left */
+}
+
+.gi-button:hover {
+    background-color: #CCCCFF;
+}
+
+/* Style for the "Hear from Past Ambassadors" section */
+.past-ambassadors {
+    padding: 50px 0;
+    text-align: center;
+}
+
+.past-header {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #443f83; /* Dark text color */
+}
+
+/* Style for individual past ambassador sections */
+.past-section {
+    display: inline-block;
+    width: 300px; /* Adjust the size as needed */
+    margin: 20px; /* Adjust the spacing as needed */
+    text-align: left;
+    padding: 20px;
+    background-color: #fff; /* Background color for the section */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    border-radius: 8px; /* Rounded corners */
+    transition: transform 0.3s, box-shadow 0.3s; /* Smooth scaling and shadow on hover */
+}
+
+.past-section:hover {
+    transform: scale(1.05); /* Enlarge on hover */
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
+}
+
+.past-section h5 {
+    font-size: 24px;
+    margin: 10px 0;
+    color: #333; /* Dark text color for names */
+}
+
+/* Style the italicized text using a class */
+.italic-text {
+    font-style: italic; /* Italicize the text */
+    color: #5b8cc6; /* Set a different color for the text */
+}
+
+.past-section p {
+    font-size: 18px;
+    color: #CCCCFF; /* Slightly darker text color for descriptions */
+    margin: 0;
+}
+
+/* Center the content within the sections */
+.past-section div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    height: 100%;
+    padding: 10px;
+}
+
+/* FAQ */
+section.faq{
+    background-color: #c2ebff;
+    display: flex;
+    flex-flow: column nowrap;
+    
+}
+
+/* Title of the section */
+.faq-title{
+    text-align: center;
+    margin-bottom: 15px;
+    font-size:2rem;
+    color: #5b8cc6;
+}
+
+/*question boxes*/
+.question{
+    display: flex; /* keep questions in a colum */
+    align-items: center;
+    background-color: #F0FFFF;
+    margin: 0 100px 5px 100px;
+    border-bottom: 2px solid #5b8cc6;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    height: 90px;
+    position: relative;
+}
+
+.question h3{
+    margin-left: 25px;
+    color: #443f83;
+}
+
+.question:hover{
+    background-color: #5b8cc6;
+}
+
+.question:hover h3{
+    color: white;
+}
+
+.question:hover .arrow{
+   fill: white;
+}
+
+/* Arrow */
+.arrow{
+    position: absolute;
+    fill: #443f83;
+    left: 93%;
+    cursor: pointer;
+    transition: width 0.5s ease-in-out, height 0.5s ease-in-out;
+}
+
+/* answer */
+.answer{
+    background-color: white;
+    margin: 0 100px 5px 100px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    max-height: none;
+    overflow: hidden;
+    display:none
+}
+
+.answer-text{
+    display: flex;
+    align-items: center;
+    line-height: 1.5;
+    margin: 5px;
+}
+
+/*enlarge when arrow is hovered */
+.arrow svg:hover{
+    width: 55px;
+    height: 55px;
+}
+
+/* CONTACT PAGE */
+.contact {
+    background-color: #c2ebff;
+    padding: 50px 0;
+    height: 80vh;
+    text-align: center;
+}
+
+.contact-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    margin: 0 auto;
+    max-width: 600px;
+}
+
+.contact h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #443f83; /* Dark blue */
+}
+
+.contact p {
+    font-size: 22px;
+    color: #5b8cc6; /* Dark blue */
+    margin-bottom: 20px; /* Add margin below paragraphs */
+}
+
+/* Button Styling */
+.contact-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #CCCCFF;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+    margin-top: 5px; /* Add margin to create space between the button and the paragraph */
+}
+
+.contact-button:hover {
+    background-color: #443f83;
+}
+
+.socials {
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+}
+
+.social {
+    margin: 0 10px;
+    width: 110px; /* Increase button size */
+    height: 110px; /* Increase button size */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: #7287c3;
+    transition: background-color 0.3s ease;
+}
+
+/* Increase the size of the SVG icons */
+.social svg {
+    fill: #ffffff;
+    width: 50px; /* Adjust the icon size */
+    height: 50px; /* Adjust the icon size */
+}
+
+.social:hover {
+    background-color: #84aedb;
+}
+
+/* Footer */
+.footer {
+    background-color: #5b8cc6;
+    color: white;
+    padding: 20px 0;
+    justify-content: center;
+}
